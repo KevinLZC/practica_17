@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se inyecta CDN de JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <link href="/assets/style.css" type=text/css rel=stylesheet />
     <title>Test JSON</title>
@@ -11,6 +12,7 @@
 <body>
     <h1>Prueba a la llamada JQuery</h1>
 <script>
+    // Se realiza la llamada a la ruta de /personJson
     $.ajax({
         type: 'POST',
         url: '/personJson',

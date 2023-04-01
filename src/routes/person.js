@@ -10,11 +10,13 @@ router.post('/addStudent', (req, res) => { //ruta de renderizado de datos
                             edad: req.body.edad, 
                             nss: req.body.nss, 
                             tipoSangre: req.body.tipoSangre});
-});
+}); 
 
-router.post('/personJson', express.json({type:'*/*'}), (req, res) => {
+// estamos imprimiendo los datos envíados desde la vista testJson
+router.post('/personJson', express.json({type:'*/*'}), (req, res) => { // se realiza la conversión de string a object
     console.log(`Nombre: ${req.body.nombre} - Apellido: ${req.body.apellido}`);
 });
+// ruta para renderizar la vista testJson y mandar la petición POST a /personJson
 router.get('/testJson', (req, res) => {
     res.render('testJson');
 });
